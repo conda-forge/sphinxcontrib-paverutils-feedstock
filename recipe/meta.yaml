@@ -1,6 +1,6 @@
 {% set name = "sphinxcontrib-paverutils" %}
-{% set version = "1.14.0" %}
-{% set sha256 = "2124c851f96356012ed5c92ce320ca3a842cce8a94ddd2319bcb0835b48b9f80" %}
+{% set version = "1.17.0" %}
+{% set sha256 = "daafc4440018c34b0ab3fe55b72e6c1c484a23622fb3caf73f08f77fb458c149" %}
 
 package:
   name: {{ name|lower }}
