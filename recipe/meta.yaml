@@ -1,6 +1,6 @@
 {% set name = "sphinxcontrib-paverutils" %}
-{% set version = "1.17.0" %}
-{% set sha256 = "daafc4440018c34b0ab3fe55b72e6c1c484a23622fb3caf73f08f77fb458c149" %}
+{% set version = "1.18.1" %}
+{% set sha256 = "8abaed9b77cf1e477c647193d2eb876947dc8313ee2b6439d6fc0ffcb0552953" %}
 
 package:
   name: {{ name|lower }}
@@ -8,13 +8,13 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
